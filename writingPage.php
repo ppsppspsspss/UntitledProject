@@ -10,11 +10,7 @@
 
 <body>
     <header>
-        <nav>
-            <div class="header">
-                <h1>Code Editor</h1>
-            </div>
-        </nav>
+        <?php include('navbar.php');?>
     </header>
     <div class="container">
         <section class="editor">
