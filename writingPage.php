@@ -27,14 +27,15 @@
             <div class="editorContainer">
                 <div id="codeEditor"></div>
             </div>
-            <button id="clearButton">Clear Editor</button>
+            <div class="buttons">
+                <button id="clearButton"><i class="fa-solid fa-eraser fa-flip"></i>Clear Editor</button>
+                <button id="copyButton"><i class="fa-solid fa-copy fa-fade"></i>Copy Code</button>
+            </div>
         </section>
 
         <section class="file">
             <div class="fileContainer">
-                <label for="fileInput" class="fileUpload">
-                    <span>+</span> Add File
-                </label>
+                <box class='fileUpload'><i class="fa-solid fa-folder-plus fa-beat fa-xl"></i>Add File</box>
                 <input type="file" id="fileInput">
             </div>
         </section>

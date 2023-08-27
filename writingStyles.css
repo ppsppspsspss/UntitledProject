@@ -61,7 +61,12 @@ label {
     font-family: "Courier New", Courier, monospace;
     border-radius: 10px;
     border: 10px solid #3222;
-    ;
+
+}
+
+.buttons{
+    position: relative;
+    left:300px;
 }
 
 #clearButton {
@@ -74,8 +79,23 @@ label {
     cursor: pointer;
     max-width: 200px;
     margin: 0px 0px 10px 20px;
-
 }
+#copyButton {
+    background-color: #24292e;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bolder;
+    border-radius: 10px;
+    cursor: pointer;
+    max-width: 200px;
+    margin: 0px 0px 10px 20px;
+}
+
+i{
+    margin-right: 10px;
+}
+
 
 input[type="file"] {
     display: none;
