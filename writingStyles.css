@@ -40,6 +40,7 @@ label {
     background: #24292e;
     color: #fff;
     text-align: center;
+    padding: 5px;
 }
 
 .editorContainer {
@@ -65,8 +66,10 @@ label {
 }
 
 .buttons{
+    display: flex;
+    justify-content: space-evenly;
     position: relative;
-    left:300px;
+    /* left:300px; */
 }
 
 #clearButton {
@@ -99,6 +102,11 @@ i{
 
 input[type="file"] {
     display: none;
+}
+
+#addFileIcon{
+    position: relative;
+    left: 20px;
 }
 
 .file {

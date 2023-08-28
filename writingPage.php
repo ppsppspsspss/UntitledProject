@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        <?php include('navbar.php');?>
+        <?php include('writingPageNavbar.php');?>
     </header>
     <div class="container">
         <section class="editor">
@@ -18,11 +18,24 @@
             <select id="languageSelector">
                 <option value="txt">Text</option>
                 <option value="python">Python</option>
-                <option value="php">php</option>
                 <option value="javascript">JavaScript</option>
+                <option value="java">Java</option>
+                <option value="php">PHP</option>
+                <option value="ruby">Ruby</option>
+                <option value="c">C</option>
+                <option value="cpp">C++</option>
+                <option value="csharp">C#</option>
                 <option value="html">HTML</option>
                 <option value="css">CSS</option>
-                <!------------------------------------------------ aro language add kora lagbe -->
+                <option value="sql">SQL</option>
+                <option value="swift">Swift</option>
+                <option value="kotlin">Kotlin</option>
+                <option value="typescript">TypeScript</option>
+                <option value="go">Go</option>
+                <option value="rust">Rust</option>
+                <option value="scala">Scala</option>
+                <option value="perl">Perl</option>
+                <option value="r">R</option>
             </select>
             <div class="editorContainer">
                 <div id="codeEditor"></div>
@@ -35,10 +48,13 @@
 
         <section class="file">
             <div class="fileContainer">
-                <box class='fileUpload'><i class="fa-solid fa-folder-plus fa-beat fa-xl"></i>Add File</box>
+                <label for="fileInput" class="fileUpload"><i id='addFileIcon'
+                        class="fa-solid fa-folder-plus fa-beat fa-xl"></i><br><br>Add
+                    File</label>
                 <input type="file" id="fileInput">
             </div>
         </section>
+
     </div>
 
     <footer>
