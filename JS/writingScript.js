@@ -99,6 +99,7 @@ fileInput.addEventListener("change", function () {
 
         const deleteButton = document.createElement("i");
         deleteButton.className = "fa-solid fa-trash fa-spin-pulse";
+        deleteButton.style.color = "#000";
         deleteButton.style.cursor = "pointer";
         deleteButton.style.marginLeft = "30px";
         deleteButton.addEventListener("click", function () {
