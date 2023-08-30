@@ -3,6 +3,7 @@ let languageSelector = document.getElementById("languageSelector");
 let clearButton = document.getElementById("clearButton");
 let fileInput = document.getElementById("fileInput");
 let fileList = document.getElementById("fileList");
+let copyButton = document.getElementById("copyButton");
 
 let editor = ace.edit(codeEditor);
 
@@ -81,6 +82,22 @@ clearButton.addEventListener("click", function () {
     editor.getSession().setValue("");
 });
 
+copyButton.addEventListener("click", function () {
+    let editorText = editor.getSession().getValue();
+
+    let textArea = document.createElement("textArea");
+    textArea.value = editorText;
+    document.body.appendChild(textArea);
+    textArea.select();
+
+    document.execCommand("copy");
+    document.body.removeChild(textArea);
+
+    copyButton.innerHTML = '<i class="fa-solid fa-copy"></i>Copied!';
+    setTimeout(function () {
+        copyButton.innerHTML = '<i class="fa-solid fa-copy fa-fade"></i>Copy Code';
+    }, 3000);
+});
 
 let filterCounter = 1;
 
