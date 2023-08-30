@@ -1,9 +1,10 @@
 let codeEditor = document.querySelector("#codeEditor");
 let languageSelector = document.getElementById("languageSelector");
 let clearButton = document.getElementById("clearButton");
+let copyButton = document.getElementById("copyButton");
+let downloadButton = document.querySelector("#downloadButton");
 let fileInput = document.getElementById("fileInput");
 let fileList = document.getElementById("fileList");
-let copyButton = document.getElementById("copyButton");
 
 let editor = ace.edit(codeEditor);
 
@@ -97,6 +98,46 @@ copyButton.addEventListener("click", function () {
     setTimeout(function () {
         copyButton.innerHTML = '<i class="fa-solid fa-copy fa-fade"></i>Copy Code';
     }, 3000);
+});
+
+downloadButton.addEventListener("click", function () {
+    let selectedLanguage = languageSelector.value;
+    let editorText = editor.getSession().getValue();
+
+    let fileName = document.getElementById("editorFileName").value || "code";
+
+    const extensions = {
+        'python': 'py',
+        'javascript': 'js',
+        'java': 'java',
+        'php': 'php',
+        'ruby': 'rb',
+        'c': 'c',
+        'cpp': 'cpp',
+        'csharp': 'cs',
+        'html': 'html',
+        'css': 'css',
+        'sql': 'sql',
+        'swift': 'swift',
+        'kotlin': 'kt',
+        'typescript': 'ts',
+        'go': 'go',
+        'rust': 'rs',
+        'scala': 'scala',
+        'perl': 'pl',
+        'r': 'r',
+        'txt': 'txt'
+    };
+
+    let fileExtension = extensions[selectedLanguage] || 'txt';
+    const blob = new Blob([editorText], { type: 'text/plain' });
+
+    const downloadLink = document.createElement('a');
+    downloadLink.href = URL.createObjectURL(blob);
+    downloadLink.download = `${fileName}.${fileExtension}`;
+
+    downloadLink.click();
+
 });
 
 let filterCounter = 1;
