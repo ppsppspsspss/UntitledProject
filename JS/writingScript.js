@@ -6,6 +6,7 @@ let downloadButton = document.querySelector("#downloadButton");
 let fileInput = document.getElementById("fileInput");
 let fileList = document.getElementById("fileList");
 
+
 let editor = ace.edit(codeEditor);
 
 editor.setShowPrintMargin(false);
@@ -174,9 +175,19 @@ fileInput.addEventListener("change", function () {
     }
 });
 
-
 editor.focus();
 
+window.addEventListener("beforeunload", function (e) {
+    const editorText = editor.getSession().getValue();
+    const selectedFiles = fileInput.files.length > 0;
+
+    if (editorText.trim() !== "" || selectedFiles) {
+
+        const confirmationMessage = "You have unsaved changes. Are you sure you want to refresh the page?";
+        (e || window.event).returnValue = confirmationMessage;
+        return confirmationMessage;
+    }
+});
 
 // ace/ theme / ambiance
 // ace / theme / chaos
