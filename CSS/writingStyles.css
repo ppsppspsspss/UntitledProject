@@ -69,7 +69,7 @@ label {
     font-size: 14px;
     font-family: "Courier New", Courier, monospace;
     border-radius: 10px;
-    border: 10px solid #3222;
+    border-top: 20px solid #3222;
 }
 
 .buttons {
