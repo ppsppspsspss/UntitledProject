@@ -98,7 +98,7 @@
             isDarkMode = false;
         } else {
             document.body.style.backgroundImage = 'url(Images/wallpaperDark.jpg)';
-            document.body.style.color = '#fff';
+            document.body.style.color = '#5d5d5a';
             navbarIcons.style.backgroundColor = '#1a1a1a';
             themeToggle.innerHTML = moonIcon;
             isDarkMode = true;
