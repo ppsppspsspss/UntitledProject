@@ -76,7 +76,7 @@
                 <button id="shareButton" class="button"><i class="fa-solid fa-code"></i> Share Code</button>
                 <button id="settingsButton" class="button"><i class="fa-solid fa-gear"></i> Settings</button>
                 <button id="signInButton" class="button"><i class="fa-solid fa-right-to-bracket"></i> Sign In</button>
-                <button id="themeToggleButton" class="button" id="themeToggle"><i class="fa-solid fa-sun"></i></button>
+                <button class="button" id="themeToggle"><i class="fa-solid fa-sun"></i></button>
             </div>
         </div>
     </div>
