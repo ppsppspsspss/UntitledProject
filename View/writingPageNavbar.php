@@ -72,10 +72,10 @@
                 <i class="fa-brands fa-google"></i> Project er nam
             </div>
             <div class="navbarIcons">
-                <button id="downloadButton" class="button"><i class="fa-solid fa-download"></i> Download</button>
-                <button id="shareButton" class="button"><i class="fa-solid fa-code"></i> Share Code</button>
-                <button id="settingsButton" class="button"><i class="fa-solid fa-gear"></i> Settings</button>
-                <button id="signInButton" class="button"><i class="fa-solid fa-right-to-bracket"></i> Sign In</button>
+                <button class="button" id="downloadButton"><i class="fa-solid fa-download"></i> Download</button>
+                <button class="button" id="shareButton"><i class="fa-solid fa-code"></i> Share Code</button>
+                <button class="button" id="settingsButton"><i class="fa-solid fa-gear"></i> Settings</button>
+                <button class="button" id="signInButton"><i class="fa-solid fa-right-to-bracket"></i> Sign In</button>
                 <button class="button" id="themeToggle"><i class="fa-solid fa-sun"></i></button>
             </div>
         </div>
