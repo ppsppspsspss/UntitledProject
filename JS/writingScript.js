@@ -82,6 +82,7 @@ clearButton.addEventListener("click", function () {
 });
 
 
+let filterCounter = 1;
 
 fileInput.addEventListener("change", function () {
 
@@ -90,19 +91,27 @@ fileInput.addEventListener("change", function () {
 
         const listItem = document.createElement("li");
 
+        const fileNumber = document.createElement("span");
+        fileNumber.textContent = filterCounter + ". ";
+        fileNumber.style.marginRight = "5px";
+
+        const fileNameNode = document.createTextNode(fileName);
+
         const deleteButton = document.createElement("i");
         deleteButton.className = "fa-solid fa-trash fa-spin-pulse";
         deleteButton.style.cursor = "pointer";
+        deleteButton.style.marginLeft = "30px";
         deleteButton.addEventListener("click", function () {
             listItem.remove();
         });
 
-        const fileNameNode = document.createTextNode(fileName);
-
-        listItem.appendChild(deleteButton);
+        listItem.appendChild(fileNumber);
         listItem.appendChild(fileNameNode);
+        listItem.appendChild(deleteButton);
 
         fileList.appendChild(listItem);
+
+        filterCounter++;
     }
 });
 

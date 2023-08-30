@@ -205,6 +205,6 @@ input[type="file"] {
     padding: 10px;    
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
 }
